@@ -1,2 +1,2 @@
-# CodingTest-PY
-파이썬으로 코딩테스트 
+# CodingTest
+코딩테스트 1일 1커밋
