@@ -32,6 +32,7 @@ class Solution {
         }
     }
     
+    // 조건 체크 함수
     public boolean check(ArrayList<Character> arr, String[] data) {
         
         for (int i = 0; i < data.length; i++) {
@@ -41,15 +42,15 @@ class Solution {
             int v = data[i].charAt(4) - '0';
             
             if (op == '>') {
-                if (Math.abs(first - second) <= v) {
+                if (Math.abs(first - second) - 1 <= v) {
                     return false;
                 }
             } else if(op == '<') {
-                if (Math.abs(first - second) >= v) {
+                if (Math.abs(first - second) - 1 >= v) {
                     return false;
                 } 
             } else {
-                if (Math.abs(first - second) != v + 1) {
+                if (Math.abs(first - second) - 1 != v) {
                     return false;
                 }
             }
