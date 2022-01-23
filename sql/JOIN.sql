@@ -13,6 +13,16 @@ ON i.ANIMAL_ID = o.ANIMAL_ID
 WHERE i.DATETIME > o.DATETIME
 ORDER BY i.DATETIME;
 
+-- 오랜 기간 보호한 동물(1) https://programmers.co.kr/learn/courses/30/lessons/59044
+SELECT i.NAME, i.DATETIME
+FROM ANIMAL_INS i
+LEFT JOIN ANIMAL_OUTS o
+ON i.ANIMAL_ID = o.ANIMAL_ID
+WHERE o.ANIMAL_ID is NULL
+ORDER BY i.DATETIME 
+LIMIT 3
+
+
 -- MySQL은 FULL OUTER JOIN이 없다
 -- 다음과 같이 실행한다
 SELECT i.ANIMAL_ID, i.NAME 
